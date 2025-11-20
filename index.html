@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h2 class="heading">WEATHER APP</h2>
+            <div class="tab-container">
+                <div class="your tabs" data-userWeather>your weather</div>
+                <div class="search tabs" data-searchWeather>search weather</div>
+            </div>
+            
+
+                <!-- serch-weather-ui -->
+                <form class="form-container">
+                    <input type="text" placeholder="Search for city...." data-search>
+                    <div class="search-btn" searchBtn><img src="assets/search.png" height="22" width="22" loading="lazy"></div>
+                </form>
+                <!-- grant-location-container -->
+                <div class="grant-location-container">
+                    <img src="assets/location.png" alt="" width="80" height="80" loading="lazy">
+                    <h2>grant locatio access</h2>
+                    <p>allow access get weather information</p>
+                    <div class="grant-access" grant-btn>grant access</div>
+                </div>
+
+                <!-- your weather ui -->
+                <div class="your-weather">
+                    <div class="show-city">
+                        <p id="city"></p>
+                        <img id="country-icon"> 
+                    </div>
+                    <p air-condition class="airCondition"></p>
+                    <img weather-icon class="weatherIcon">
+                    <h2 temprature class="temp"></h2>
+                    <div class="weather-elements">
+                        <div class="windspeed  box">
+                            <div class="windspeed-icon"><img src="assets/wind.png"  class="wind" alt=""></div>
+                            <p>windspeed</p>
+                            <p class="wind-speed" windSpeed></p>
+                        </div> 
+                        <div class="humidity box">
+                            <div class="humidity-icon"> <img src="assets/humidity.png" class="humidity-img"></div>
+                            <p>humidity</p>
+                            <p class="humidity-percentage" humidity></p>
+                        </div>
+                        <div class="clouds box">
+                            <div class="clouds-icon"><img src="assets/cloud.png" alt="" class="clouds-img"></div>
+                            <p>clouds</p>
+                            <p class="clouds-percentage" cloudy></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- loading-ui-container -->
+                <div class="loading">
+                    <img src="assets/loading.gif" height="200" width="200">
+                    <p>loading</p>
+                </div>
+                 
+                <div class="error" data-not-found-error>
+                    <img src="assets/not-found.png"  height="200" width="200">
+                    <p>CITY NOT FOUND</p>
+                </div>
+            </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
